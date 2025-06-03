@@ -13,6 +13,14 @@ var varTargetManagementGroupResourceId = tenantResourceId('Microsoft.Management/
 
 // This variable contains a number of objects that load in the custom Azure Policy Defintions that are provided as part of the ESLZ/ALZ reference implementation - this is automatically created in the file 'infra-as-code\bicep\modules\policy\lib\policy_definitions\_policyDefinitionsBicepInput.txt' via a GitHub action, that runs on a daily schedule, and is then manually copied into this variable.
 var varCustomPolicyDefinitionsArray = [
+	{
+		name: 'Cegal-Maintenance-tag'
+		libDefinition: loadJsonContent('lib/policy_definitions/cegal_maintenance_tag.json')
+	}
+	{
+		name: 'Cegal-Managed-tag'
+		libDefinition: loadJsonContent('lib/policy_definitions/cegal_managed_tag.json')
+	}
   {
 		name: 'Append-AppService-httpsonly'
 		libDefinition: loadJsonContent('lib/policy_definitions/policy_definition_es_Append-AppService-httpsonly.json')
