@@ -1,4 +1,12 @@
 {
+	name: ''
+	libDefinition: loadJsonContent('lib/policy_definitions/cegal_maintenance_tag.json')
+}
+{
+	name: '4f9dc7db-30c1-420c-b61a-e1d640128d26'
+	libDefinition: loadJsonContent('lib/policy_definitions/cegal_managed_tag.json')
+}
+{
 	name: 'Append-AppService-httpsonly'
 	libDefinition: loadJsonContent('lib/policy_definitions/policy_definition_es_Append-AppService-httpsonly.json')
 }
